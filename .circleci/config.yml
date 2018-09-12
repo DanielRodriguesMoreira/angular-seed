@@ -17,5 +17,5 @@ jobs:
     - run: npm run lint
 
     #Deploy production
-    - deploy:
-        - run: scp -r angular-seed/* drmoreira@Test:/~/
+    deploy:
+      - scp -r angular-seed/* drmoreira@Test:/~/
