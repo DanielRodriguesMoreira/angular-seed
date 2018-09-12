@@ -18,4 +18,4 @@ jobs:
 
     #Deploy production
     - deploy:
-        - scp -r angular-seed/* drmoreira@Test:/~/
+        - run: scp -r angular-seed/* drmoreira@Test:/~/
