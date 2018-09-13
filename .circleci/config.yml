@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - checkout
-      #- run: az --version
+      - run: az --version
       - run: az login -u daniel.moreira@present-technologies.com -p Present6?
       #- run: cd ~/repo/src
       #- run: ls -al ~/repo/src
