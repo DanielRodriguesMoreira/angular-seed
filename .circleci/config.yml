@@ -21,7 +21,7 @@ jobs:
       - checkout
       - run: az --version
       - run: az login -u daniel.moreira@present-technologies.com -p Present6?
-      - run: /scripts/test.sh
+      - run: /scripts/./test.sh
 
 workflows:
   version: 2
