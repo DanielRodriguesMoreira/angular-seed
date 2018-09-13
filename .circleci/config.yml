@@ -19,6 +19,7 @@ jobs:
       - checkout
       - run: az --version
       - run: az login -u daniel.moreira@present-technologies.com -p Present6?
+      - run: az group list
 
 workflows:
   version: 2
