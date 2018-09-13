@@ -15,12 +15,13 @@ jobs:
     docker:
       - image: microsoft/azure-cli
 
-    working_directory: ~/repo/scripts
+    working_directory: ~/repo
 
     steps:
       - checkout
       #- run: az --version
       #- run: az login -u daniel.moreira@present-technologies.com -p Present6?
+      - run: cd /scripts
       - run: ls -al
 
 workflows:
