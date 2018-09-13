@@ -19,9 +19,9 @@ jobs:
 
     steps:
       - checkout
-      - run: az --version
-      - run: az login -u daniel.moreira@present-technologies.com -p Present6?
-      - run: /scripts/./test.sh
+      #- run: az --version
+      #- run: az login -u daniel.moreira@present-technologies.com -p Present6?
+      - run: ls -al
 
 workflows:
   version: 2
