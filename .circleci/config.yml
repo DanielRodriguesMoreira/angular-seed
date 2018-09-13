@@ -15,7 +15,7 @@ jobs:
     docker:
       - image: microsoft/azure-cli
 
-    working_directory: ~/repo
+    working_directory: ~/repo/scripts
 
     steps:
       - checkout
