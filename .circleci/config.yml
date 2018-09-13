@@ -2,13 +2,24 @@ version: 2
 jobs:
   build:
     docker:
-    - image: circleci/node:8
-
       working_directory: ~/repo
+
+      - image: circleci/node:8
 
     steps:
 
     - checkout
     - run: npm install
     - run: npm run lint
+
+    - run: AZ_REPO=$(lsb_release -cs)
+        echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | \
+        sudo tee /etc/apt/sources.list.d/azure-cli.list
+    - run: curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+    - run: sudo apt-get install apt-transport-https
+    - run: sudo apt-get update && sudo apt-get install azure-cli
+
     - run: az --version
+
+
+
