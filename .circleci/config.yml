@@ -9,10 +9,11 @@ jobs:
     steps:
 
     - checkout
+    - run: apt-get install -y sudo
     - run: npm install
     - run: npm run lint
 
-    - run: apt-get update && apt-get install azure-cli
+    - run: sudo apt-get update && sudo apt-get install azure-cli
 
     - run: az --version
 
