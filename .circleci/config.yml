@@ -12,18 +12,30 @@ jobs:
     #- run: npm run lint
 
   test:
+    #docker:
+    #  - image: microsoft/azure-cli
+    #
+    #working_directory: ~/repo
+    #
+    #steps:
+    #  - checkout
+    #  - run: az --version
+    #  - run: az login -u daniel.moreira@present-technologies.com -p Present6?
+    #  #- run: cd ~/repo/src
+    #  #- run: ls -al ~/repo/src
+    #  - run: ~/repo/scripts/test.sh
     docker:
-      - image: microsoft/azure-cli
+      - image: microsoft/powershell
 
     working_directory: ~/repo
 
     steps:
       - checkout
       - run: az --version
-      - run: az login -u daniel.moreira@present-technologies.com -p Present6?
+      #- run: az login -u daniel.moreira@present-technologies.com -p Present6?
       #- run: cd ~/repo/src
       #- run: ls -al ~/repo/src
-      - run: ~/repo/scripts/test.sh
+      #- run: ~/repo/scripts/test.sh
 
 workflows:
   version: 2
