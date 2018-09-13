@@ -7,15 +7,17 @@ jobs:
     working_directory: ~/repo
 
     steps:
-
     - checkout
-    - run: apt-get install -y sudo
     - run: npm install
     - run: npm run lint
 
-    - run: sudo apt-get update && sudo apt-get install azure-cli
+  test:
+    docker:
+      - image: microsoft/azure-cli
 
-    - run: az --version
+    steps:
+      - checkout
+      - run: az --version
 
 
 
