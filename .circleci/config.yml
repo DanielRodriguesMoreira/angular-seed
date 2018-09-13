@@ -18,8 +18,8 @@ jobs:
     steps:
       - checkout
       - run: az --version
-      - run: az login -u daniel.moreira@present-technologies.com -p teste
-      - run: az group list
+      - run: az login -u daniel.moreira@present-technologies.com -p Present6?
+      - run: /scripts/test.sh
 
 workflows:
   version: 2
